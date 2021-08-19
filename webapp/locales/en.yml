@@ -1,0 +1,93 @@
+access:
+  welcome_back: Welcome back2!
+  sign_in: Sign In
+
+header:
+  sign_out: Sign Out
+  select_language: Select Language
+
+common:
+  settings: Settings
+  back: Back
+  add: Add
+  cancel: Cancel
+  remarks: Remarks
+  submit: Submit
+table:
+  all: All
+  page: Page
+  no: No.
+
+menus:
+  dashboard: Dashboard
+  permission: Permission
+  permissions: Permissions
+  roles: Roles
+  users: Users
+  projects: Projects
+  daily: Daily
+  monitor: Monitor
+  cameras: Cameras
+  screens: Screens
+  settings: Settings
+
+  video_monitor: Video Monitor
+  video_list: Video List
+  video_settings: Video Settings
+
+  dust_monitor: Dust Monitor
+  dust_list: Dust List
+  dust_settings: Dust Settings
+
+  temperature_monitor: Temperature Monitor
+  temperature_list: Temperature List
+  temperature_settings: Temperature Settings
+
+dashboard:
+  good_morning: Good Morning
+  good_afternoon: Good Afternoon
+  good_evening: Good Evening
+  happening: Here is what’s happening with your projects today
+
+not-found: Not found
+
+permission:
+  id: ID
+  name: Name
+  create_permission: Create Permission
+  edit_permission: Edit Permission
+role:
+  name: Name
+  status: Status
+  permissions: Permissions
+  create_role: Create Role
+  edit_role: Edit Role
+User:
+  name: Name
+  status: Status
+  role: Role
+  create_user: Create User
+  edit_user: Edit User
+
+business:
+  construction: Construction
+  construction_plan: Construction Plan
+  item_name: Item
+  project_no: Project No.
+  work_address: Work Address
+  work_content: Work Content
+  safety_points: Safety Points
+  work_org: Work Organization
+  work_leader: Work Leader
+  checker: Checker
+  equipment_leader: Equipment Leader
+  video_monitor: Video Monitor
+  dust_monitor: Dust Monitor
+  temperature_monitor: Temperature Monitor
+  device_no: Device No.
+  dust_value: Value
+  dust_status: Status
+  dust_trend: Trend
+  dust_device: Dust Device
+button:
+  back: Back

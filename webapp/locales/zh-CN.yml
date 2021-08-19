@@ -1,0 +1,94 @@
+access:
+  welcome_back: 欢迎回来!
+  sign_in: 登录
+
+header:
+  sign_out: 退出
+  select_language: 选择语言
+  
+common:
+  settings: 设置
+  back: 返回
+  add: 添加
+  cancel: 取消
+  remarks: 备注
+
+table:
+  all: 全部
+  page: 页
+  no: 序号
+
+menus:
+  dashboard: 仪表盘
+  permission: 权限管理
+  permissions: 权限管理
+  roles: 角色管理
+  users: 用户管理
+  projects: 项目管理
+  daily: 每日施工统计
+  monitor: 监控管理
+  cameras: 相机
+  screens: 屏幕
+  settings: 系统设置
+
+  video_monitor: 视频监控
+  video_list: 设备列表
+  video_settings: 视频设置
+
+  dust_monitor: 粉尘监控
+  dust_list: 设备列表
+  dust_settings: 粉尘设置
+
+  temperature_monitor: 温度监控
+  temperature_list: 设备列表
+  temperature_settings: 温度设置
+
+
+dashboard:
+  good_morning: 早上好
+  good_afternoon: 下午好
+  good_evening: 晚上好
+  happening: 以下是今天的项目进展
+not-found: 未找到页面
+
+permission:
+  id: ID
+  name: 名称
+  create_permission: 创建权限
+  edit_permission: 编辑权限
+role:
+  name: 角色名
+  status: 状态
+  permissions: 权限
+  create_role: 创建角色
+  edit_role: 编辑角色
+User:
+  name: 用户名
+  status: 状态
+  role: 角色
+  create_user: 创建用户
+  edit_user: 编辑用户
+
+
+business:
+  construction: 施工
+  construction_plan: 施工计划
+  item_name: 项目名称
+  project_no: 工程编号
+  work_address: 作业地点
+  work_content: 作业内容
+  safety_points: 安全要点
+  work_org: 施工单位
+  work_leader: 施工单位负责人
+  checker: 点检负责人
+  equipment_leader: 设备室主管员
+  video_monitor: 视频监控
+  dust_monitor: 粉尘监控
+  temperature_monitor: 温度监控
+  device_no: 设备编号
+  dust_value: 当前值
+  dust_status: 状态
+  dust_trend: 趋势
+  dust_device: 粉尘设备
+button:
+  back: 返回

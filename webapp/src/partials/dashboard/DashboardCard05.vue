@@ -18,7 +18,7 @@ import Info from '../Info.vue'
 import RealtimeChart from '../../charts/RealtimeChart.vue'
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from '../../utils/Utils'
+import { hexToRGB } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard05',
@@ -93,13 +93,13 @@ export default {
         {
           data: slicedData.value,
           fill: true,
-          backgroundColor: `rgba(${hexToRGB(tailwindConfig().theme.colors.blue[500])}, 0.08)`,
-          borderColor: tailwindConfig().theme.colors.indigo[500],
+          backgroundColor: `rgba(${hexToRGB('#3b82f6')}, 0.08)`,
+          borderColor: '#6366f1',
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.indigo[500],
+          pointBackgroundColor: '#6366f1',
           clip: 20,
         },
       ],

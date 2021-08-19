@@ -14,7 +14,6 @@ import { ref } from 'vue'
 import BarChart from '../../charts/BarChart01.vue'
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard03',
@@ -34,8 +33,8 @@ export default {
           data: [
             800, 1600, 900, 1300, 1950, 1700,
           ],
-          backgroundColor: tailwindConfig().theme.colors.blue[400],
-          hoverBackgroundColor: tailwindConfig().theme.colors.blue[500],
+          backgroundColor: '#818cf8',
+          hoverBackgroundColor: '#6366f1',
           barPercentage: 0.66,
           categoryPercentage: 0.66,
         },
@@ -45,8 +44,8 @@ export default {
           data: [
             4900, 2600, 5350, 4800, 5200, 4800,
           ],
-          backgroundColor: tailwindConfig().theme.colors.indigo[500],
-          hoverBackgroundColor: tailwindConfig().theme.colors.indigo[600],
+          backgroundColor: '#6366f1',
+          hoverBackgroundColor: '4f46e5',
           barPercentage: 0.66,
           categoryPercentage: 0.66,
         },

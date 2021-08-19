@@ -16,7 +16,7 @@ import {
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue } from '../utils/Utils'
 
 Chart.register(BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend)
 
@@ -101,7 +101,7 @@ export default {
             const items = c.options.plugins.legend.labels.generateLabels(c)
             items.forEach((item) => {
               const li = document.createElement('li')
-              li.style.marginRight = tailwindConfig().theme.margin[4]
+              li.style.marginRight = '1rem'
               // Button element
               const button = document.createElement('button')
               button.style.display = 'inline-flex'
@@ -115,10 +115,10 @@ export default {
               // Color box
               const box = document.createElement('span')
               box.style.display = 'block'
-              box.style.width = tailwindConfig().theme.width[3]
-              box.style.height = tailwindConfig().theme.height[3]
-              box.style.borderRadius = tailwindConfig().theme.borderRadius.full
-              box.style.marginRight = tailwindConfig().theme.margin[2]
+              box.style.width = '0.75rem'
+              box.style.height = '0.75rem'
+              box.style.borderRadius = '50%'
+              box.style.marginRight = '0.5rem'
               box.style.borderWidth = '3px'
               box.style.borderColor = item.fillStyle
               box.style.pointerEvents = 'none'
@@ -127,16 +127,16 @@ export default {
               labelContainer.style.display = 'flex'
               labelContainer.style.alignItems = 'center'
               const value = document.createElement('span')
-              value.style.color = tailwindConfig().theme.colors.gray[800]
-              value.style.fontSize = tailwindConfig().theme.fontSize['3xl'][0]
-              value.style.lineHeight = tailwindConfig().theme.fontSize['3xl'][1].lineHeight
-              value.style.fontWeight = tailwindConfig().theme.fontWeight.bold
-              value.style.marginRight = tailwindConfig().theme.margin[2]
+              value.style.color = '#27272a'
+              value.style.fontSize = '1.875rem'
+              value.style.lineHeight = '2.25rem'
+              value.style.fontWeight = '700'
+              value.style.marginRight = '0.5rem'
               value.style.pointerEvents = 'none'
               const label = document.createElement('span')
-              label.style.color = tailwindConfig().theme.colors.gray[500]
-              label.style.fontSize = tailwindConfig().theme.fontSize.sm[0]
-              label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight
+              label.style.color = '#71717a'
+              label.style.fontSize = '0.875rem'
+              label.style.lineHeight = '1.25rem'
               const theValue = c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0)
               const valueText = document.createTextNode(formatValue(theValue))
               const labelText = document.createTextNode(item.text)

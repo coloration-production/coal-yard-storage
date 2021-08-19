@@ -10,7 +10,7 @@ import {
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue } from '../utils/Utils'
 
 Chart.register(LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip)
 
@@ -29,7 +29,7 @@ export default {
         data: props.data,
         options: {
           chartArea: {
-            backgroundColor: tailwindConfig().theme.colors.gray[50],
+            backgroundColor: '#fafafa',
           },
           layout: {
             padding: 20,

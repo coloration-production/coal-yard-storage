@@ -38,7 +38,7 @@ import Icon from '../../images/icon-03.svg'
 import EditMenu from '../EditMenu.vue'
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from '../../utils/Utils'
+import { hexToRGB } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard01',
@@ -69,13 +69,13 @@ export default {
             270, 829, 344, 388, 364,
           ],
           fill: true,
-          backgroundColor: `rgba(${hexToRGB(tailwindConfig().theme.colors.blue[500])}, 0.08)`,
-          borderColor: tailwindConfig().theme.colors.indigo[500],
+          backgroundColor: `rgba(${hexToRGB('#3b82f6')}, 0.08)`,
+          borderColor: '#6366f1',
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.indigo[500],
+          pointBackgroundColor: '#6366f1',
           clip: 20,
         },
         // Gray line
@@ -86,12 +86,12 @@ export default {
             145, 145, 354, 260, 188, 188, 300,
             300, 282, 364, 660, 554,
           ],
-          borderColor: tailwindConfig().theme.colors.gray[300],
+          borderColor: '#d4d4d8',
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.gray[300],
+          pointBackgroundColor: '#d4d4d8',
           clip: 20,
         },
       ],

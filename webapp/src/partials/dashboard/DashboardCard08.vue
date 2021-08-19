@@ -1,20 +1,6 @@
-<template>
-  <div class="flex flex-col col-span-full sm:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
-    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-      <h2 class="font-semibold text-gray-800">Sales Over Time (all stores)</h2>
-    </header>
-    <!-- Chart built with Chart.js 3 -->
-    <!-- Change the height attribute to adjust the chart height -->
-    <LineChart :data="chartData" width="595" height="248" />
-  </div>  
-</template>
-
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 import LineChart from '../../charts/LineChart02.vue'
-
-// Import utilities
-import { tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard08',
@@ -44,13 +30,13 @@ export default {
             122, 110, 104, 152, 166, 233, 268,
             252, 284, 284, 333, 323,
           ],
-          borderColor: tailwindConfig().theme.colors.indigo[500],
+          borderColor: '#6366f1',
           fill: false,
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.indigo[500],
+          pointBackgroundColor: '#6366f1',
         },
         // Blue line
         {
@@ -61,13 +47,13 @@ export default {
             276, 0, 124, 42, 124, 88, 88,
             215, 156, 88, 124, 64,
           ],
-          borderColor: tailwindConfig().theme.colors.blue[400],
+          borderColor: '#60a5fa',
           fill: false,
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.blue[400],
+          pointBackgroundColor: '#60a5fa',
         },
         // Green line
         {
@@ -78,13 +64,13 @@ export default {
             223, 188, 114, 162, 200, 150, 118,
             118, 76, 122, 230, 268,
           ],
-          borderColor: tailwindConfig().theme.colors.green[500],
+          borderColor: '#22c55e',
           fill: false,
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.green[500],
+          pointBackgroundColor: '#22c55e',
         },
       ],
     })
@@ -95,3 +81,13 @@ export default {
   }
 }
 </script>
+<template>
+  <div class="flex flex-col col-span-full sm:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
+    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
+      <h2 class="font-semibold text-gray-800">Sales Over Time (all stores)</h2>
+    </header>
+    <!-- Chart built with Chart.js 3 -->
+    <!-- Change the height attribute to adjust the chart height -->
+    <LineChart :data="chartData" width="595" height="248" />
+  </div>  
+</template>

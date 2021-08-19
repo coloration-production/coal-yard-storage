@@ -17,9 +17,6 @@ import {
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
-// Import utilities
-import { tailwindConfig } from '../utils/Utils'
-
 Chart.register(DoughnutController, ArcElement, TimeScale, Tooltip)
 
 export default {
@@ -68,15 +65,15 @@ export default {
             const items = c.options.plugins.legend.labels.generateLabels(c)
             items.forEach((item) => {
               const li = document.createElement('li')
-              li.style.margin = tailwindConfig().theme.margin[1]
+              li.style.margin = '0.25rem'
               // Button element
               const button = document.createElement('button')
               button.classList.add('btn-xs')
-              button.style.backgroundColor = tailwindConfig().theme.colors.white
-              button.style.borderWidth = tailwindConfig().theme.borderWidth[1]
-              button.style.borderColor = tailwindConfig().theme.colors.gray[200]
-              button.style.color = tailwindConfig().theme.colors.gray[500]
-              button.style.boxShadow = tailwindConfig().theme.boxShadow.md
+              button.style.backgroundColor = '#fff'
+              button.style.borderWidth = '1px'
+              button.style.borderColor = '#e4e4e7'
+              button.style.color = '#71717a'
+              button.style.boxShadow = 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)'
               button.style.opacity = item.hidden ? '.3' : ''
               button.onclick = () => {
                 c.toggleDataVisibility(item.index, !item.index)
@@ -86,11 +83,11 @@ export default {
               // Color box
               const box = document.createElement('span')
               box.style.display = 'block'
-              box.style.width = tailwindConfig().theme.width[2]
-              box.style.height = tailwindConfig().theme.height[2]
+              box.style.width = '0.5rem'
+              box.style.height = '0.5rem'
               box.style.backgroundColor = item.fillStyle
-              box.style.borderRadius = tailwindConfig().theme.borderRadius.sm
-              box.style.marginRight = tailwindConfig().theme.margin[1]
+              box.style.borderRadius = '0.125rem'
+              box.style.marginRight = '0.25rem'
               box.style.pointerEvents = 'none'
               // Label
               const label = document.createElement('span')

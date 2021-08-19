@@ -1,0 +1,21 @@
+*:focus,
+button:focus,
+.btn:focus,
+.btn-sm:focus,
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-checkbox:focus,
+.form-radio:focus {
+    @apply outline-none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-checkbox:focus,
+.form-radio:focus {
+    box-shadow: none !important;
+}

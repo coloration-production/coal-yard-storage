@@ -37,7 +37,7 @@ import LineChart from '../../charts/LineChart01.vue'
 import EditMenu from '../EditMenu.vue'
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from '../../utils/Utils'
+import { hexToRGB } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard01',
@@ -68,32 +68,15 @@ export default {
             252, 423, 622, 470, 532,
           ],
           fill: true,
-          backgroundColor: `rgba(${hexToRGB(tailwindConfig().theme.colors.blue[500])}, 0.08)`,
-          borderColor: tailwindConfig().theme.colors.indigo[500],
+          backgroundColor: `rgba(${hexToRGB('#3b82f6')}, 0.08)`,
+          borderColor: '#6366f1',
           borderWidth: 2,
           tension: 0,
           pointRadius: 0,
           pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.indigo[500],
+          pointBackgroundColor: '#6366f1',
           clip: 20,
-        },
-        // Gray line
-        {
-          data: [
-            532, 532, 532, 404, 404, 314, 314,
-            314, 314, 314, 234, 314, 234, 234,
-            314, 314, 314, 388, 314, 202, 202,
-            202, 202, 314, 720, 642,
-          ],
-          borderColor: tailwindConfig().theme.colors.gray[300],
-          borderWidth: 2,
-          tension: 0,
-          pointRadius: 0,
-          pointHoverRadius: 3,
-          pointBackgroundColor: tailwindConfig().theme.colors.gray[300],
-          clip: 20,
-        },
-      ],
+        }],
     })
 
     return {

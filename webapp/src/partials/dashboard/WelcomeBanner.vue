@@ -1,8 +1,39 @@
+<script lang="ts">
+import { defineComponent, ref, onBeforeMount } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useUser } from '~/logic'
+export default defineComponent({
+  name: 'WelcomeBanner',
+  setup() {
+    const { userInfo } = useUser()
+    const greet = ref('')
+    const { t } = useI18n()
+
+    onBeforeMount(() => {
+      const hour = (new Date()).getHours()
+      greet.value = hour > 18
+        ? 'evening'
+        : hour > 12
+          ? 'afternoon'
+          : hour > 4
+            ? 'morning'
+            : 'evening'
+    })
+    return {
+      userInfo,
+      greet,
+      t,
+    }
+  },
+})
+</script>
 <template>
   <div class="relative bg-indigo-200 p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
-
     <!-- Background illustration -->
-    <div class="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
+    <div
+      class="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block"
+      aria-hidden="true"
+    >
       <svg width="319" height="198" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <path id="welcome-a" d="M64 0l64 128-64-20-64 20z" />
@@ -45,15 +76,10 @@
 
     <!-- Content -->
     <div class="relative">
-      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold mb-1">Good afternoon, Acme Inc. 👋</h1>
-      <p>Here is what’s happening with your projects today:</p>
+      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold mb-1">
+        {{ t('dashboard.good_' + greet) }}, {{ userInfo.user.name }}. 👋
+      </h1>
+      <p>{{ t('dashboard.happening') }}:</p>
     </div>
-
   </div>
 </template>
-
-<script>
-export default {
-  name: 'WelcomeBanner',
-}
-</script>

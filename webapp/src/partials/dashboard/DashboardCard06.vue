@@ -14,8 +14,6 @@ import { ref } from 'vue'
 import DoughnutChart from '../../charts/DoughnutChart.vue'
 import EditMenu from '../EditMenu.vue'
 
-// Import utilities
-import { tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard06',
@@ -33,16 +31,16 @@ export default {
             35, 30, 35,
           ],
           backgroundColor: [
-            tailwindConfig().theme.colors.indigo[500],
-            tailwindConfig().theme.colors.blue[400],
-            tailwindConfig().theme.colors.indigo[800],
+            '#6366f1',
+            '#818cf8',
+            '#3730a3',
           ],
           hoverBackgroundColor: [
-            tailwindConfig().theme.colors.indigo[600],
-            tailwindConfig().theme.colors.blue[500],
-            tailwindConfig().theme.colors.indigo[900],
+            '#4f46e5',
+            '#3b82f6',
+            '#312e81',
           ],
-          hoverBorderColor: tailwindConfig().theme.colors.white,
+          hoverBorderColor: '#fff'
         },
       ],
     })

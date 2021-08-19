@@ -18,7 +18,7 @@ import {
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue } from '../utils/Utils'
 
 Chart.register(BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend)
 
@@ -39,9 +39,9 @@ export default {
       const diff = ((currentValue - previousValue) / previousValue) * 100
       chartValue.value.innerHTML = data.datasets[0].data[data.datasets[0].data.length - 1]
       if (diff < 0) {
-        chartDeviation.value.style.backgroundColor = tailwindConfig().theme.colors.yellow[500]
+        chartDeviation.value.style.backgroundColor = '#eab308'
       } else {
-        chartDeviation.value.style.backgroundColor = tailwindConfig().theme.colors.green[500]
+        chartDeviation.value.style.backgroundColor = '#22c55e'
       }
       chartDeviation.value.innerHTML = `${diff > 0 ? '+' : ''}${diff.toFixed(2)}%`
     }    

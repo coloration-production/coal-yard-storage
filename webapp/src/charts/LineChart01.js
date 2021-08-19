@@ -1,23 +1,23 @@
 import { Line } from 'vue-chartjs'
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue } from '../utils/Utils'
 
 export default {
   extends: Line,
   props: {
     chartdata: {
       type: Object,
-      default: null
+      default: null,
     },
     options: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
   mounted() {
     this.renderChart(this.chartdata, {
       chartArea: {
-        backgroundColor: tailwindConfig().theme.colors.gray[50],
+        backgroundColor: '#fafafa',
       },
       layout: {
         padding: {
@@ -55,15 +55,15 @@ export default {
         cornerRadius: 4,
         xPadding: 8,
         yPadding: 8,
-        backgroundColor: tailwindConfig().theme.colors.white,
+        backgroundColor: '#fff',
         borderWidth: 1,
-        borderColor: tailwindConfig().theme.colors.gray[200],
+        borderColor: '#e4e4e7',
         bodyFontStyle: '500',
-        bodyFontColor: tailwindConfig().theme.colors.gray[800],
+        bodyFontColor: '#27272a',
         displayColors: false,
         callbacks: {
           title: () => false, // Disable tooltip title
-          label: (tooltipItem) => formatValue(tooltipItem.yLabel),
+          label: (tooltipItem: any) => formatValue(tooltipItem.yLabel),
         },
       },
       hover: {
@@ -73,5 +73,5 @@ export default {
       },
       maintainAspectRatio: false,
     })
-  }
+  },
 }

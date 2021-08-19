@@ -16,7 +16,7 @@
   </div>  
 </template>
 
-<script>
+<script lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { focusHandling } from 'cruip-js-toolkit'
 import {
@@ -25,7 +25,7 @@ import {
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue } from '../utils/Utils'
 
 Chart.register(LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip)
 
@@ -107,7 +107,7 @@ export default {
             const items = c.options.plugins.legend.labels.generateLabels(c)
             items.slice(0, 2).forEach((item) => {
               const li = document.createElement('li')
-              li.style.marginLeft = tailwindConfig().theme.margin[3]
+              li.style.marginLeft = '0.75rem'
               // Button element
               const button = document.createElement('button')
               button.style.display = 'inline-flex'
@@ -121,18 +121,18 @@ export default {
               // Color box
               const box = document.createElement('span')
               box.style.display = 'block'
-              box.style.width = tailwindConfig().theme.width[3]
-              box.style.height = tailwindConfig().theme.height[3]
-              box.style.borderRadius = tailwindConfig().theme.borderRadius.full
-              box.style.marginRight = tailwindConfig().theme.margin[2]
+              box.style.width = '0.75rem'
+              box.style.height = '0.75rem'
+              box.style.borderRadius = '50%'
+              box.style.marginRight = '0.5rem'
               box.style.borderWidth = '3px'
               box.style.borderColor = c.data.datasets[item.datasetIndex].borderColor
               box.style.pointerEvents = 'none'
               // Label
               const label = document.createElement('span')
-              label.style.color = tailwindConfig().theme.colors.gray[500]
-              label.style.fontSize = tailwindConfig().theme.fontSize.sm[0]
-              label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight
+              label.style.color = '#71717a'
+              label.style.fontSize = '0.875rem'
+              label.style.lineHeight = '1.25rem'
               const labelText = document.createTextNode(item.text)
               label.appendChild(labelText)
               li.appendChild(button)
