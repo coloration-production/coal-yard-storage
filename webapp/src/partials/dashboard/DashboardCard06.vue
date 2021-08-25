@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
+  <div class="flex flex-col col-span-full xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
     <header class="px-5 py-4 border-b border-gray-100">
-      <h2 class="font-semibold text-gray-800">Top Countries</h2>
+      <h2 class="font-semibold text-gray-800">在线设备</h2>
     </header>
     <!-- Chart built with Chart.js 3 -->
     <!-- Change the height attribute to adjust the chart height -->
-    <DoughnutChart :data="chartData" width="389" height="260" />
+    <DoughnutChart :data="chartData" height="180" />
   </div>
 </template>
 
@@ -23,12 +23,12 @@ export default {
   },
   setup() {
     const chartData = ref({
-      labels: ['United States', 'Italy', 'Other'],
+      labels: ['摄像头', '粉尘', '温度'],
       datasets: [
         {
           label: 'Top Countries',
           data: [
-            35, 30, 35,
+            16, 48, 35,
           ],
           backgroundColor: [
             '#6366f1',

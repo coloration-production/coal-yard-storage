@@ -13,7 +13,7 @@ export default defineComponent({
         value: '/video',
         children: [
           { name: 'video_list', value: '/video/list' },
-          { name: 'video_settings', value: '/video/settings' },
+          // { name: 'video_settings', value: '/video/settings' },
         ],
       },
       {

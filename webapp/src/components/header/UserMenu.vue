@@ -43,8 +43,8 @@ export default defineComponent({
         .then(() => router.replace('/access/signin'))
     }
 
-    useEventListener(document, 'click', clickHandler)
-    useEventListener(document, 'keydown', keyHandler)
+    useEventListener(globalThis.document, 'click', clickHandler)
+    useEventListener(globalThis.document, 'keydown', keyHandler)
 
     return {
       dropdownOpen,

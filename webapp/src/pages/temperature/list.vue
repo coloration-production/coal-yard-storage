@@ -115,7 +115,7 @@ export default {
     <header class="pb-4 -mt-2">
       <h2 class="font-semibold text-gray-800 flex items-center">
         <clarity-video-camera-line class="mr-1 font-bold" />
-        {{ t('table.all') }} {{ t('business.dust_device') }}
+        {{ t('table.all') }} {{ t('business.temperature_device') }}
         <span class="text-gray-400 font-medium ml-2">{{ items.length }}</span>
       </h2>
     </header>

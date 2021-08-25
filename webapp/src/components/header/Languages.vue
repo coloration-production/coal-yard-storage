@@ -31,8 +31,8 @@ export default defineComponent({
       dropdownOpen.value = false
     }
 
-    useEventListener(document, 'click', clickHandler)
-    useEventListener(document, 'keydown', keyHandler)
+    useEventListener(globalThis.document, 'click', clickHandler)
+    useEventListener(globalThis.document, 'keydown', keyHandler)
 
     return {
       changeLang,

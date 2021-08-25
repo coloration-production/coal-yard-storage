@@ -106,10 +106,10 @@ export default {
             // Reuse the built-in legendItems generator
             const items = c.options.plugins.legend.labels.generateLabels(c)
             items.slice(0, 2).forEach((item) => {
-              const li = document.createElement('li')
+              const li = globalThis.document.createElement('li')
               li.style.marginLeft = '0.75rem'
               // Button element
-              const button = document.createElement('button')
+              const button = globalThis.document.createElement('button')
               button.style.display = 'inline-flex'
               button.style.alignItems = 'center'
               button.style.opacity = item.hidden ? '.3' : ''
@@ -119,7 +119,7 @@ export default {
                 focusHandling('outline')
               }
               // Color box
-              const box = document.createElement('span')
+              const box = globalThis.document.createElement('span')
               box.style.display = 'block'
               box.style.width = '0.75rem'
               box.style.height = '0.75rem'
@@ -129,11 +129,11 @@ export default {
               box.style.borderColor = c.data.datasets[item.datasetIndex].borderColor
               box.style.pointerEvents = 'none'
               // Label
-              const label = document.createElement('span')
+              const label = globalThis.document.createElement('span')
               label.style.color = '#71717a'
               label.style.fontSize = '0.875rem'
               label.style.lineHeight = '1.25rem'
-              const labelText = document.createTextNode(item.text)
+              const labelText = globalThis.document.createTextNode(item.text)
               label.appendChild(labelText)
               li.appendChild(button)
               button.appendChild(box)

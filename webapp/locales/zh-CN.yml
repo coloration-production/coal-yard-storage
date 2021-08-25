@@ -90,5 +90,6 @@ business:
   dust_status: 状态
   dust_trend: 趋势
   dust_device: 粉尘设备
+  control_nodes: 控制节点
 button:
   back: 返回

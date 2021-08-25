@@ -5,7 +5,7 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "build:ssg": "cross-env NODE_ENV=production vite-ssg build",
-    "build:docker": "cross-env NODE_ENV=production vite build --mode docker"
+    "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
     "@coloration/asker": "^1.1.2",

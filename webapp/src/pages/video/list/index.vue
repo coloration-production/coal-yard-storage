@@ -1,32 +1,13 @@
 <script lang="ts">
 import { ref } from 'vue'
-import ApplicationsCard01 from '~/partials/applications/ApplicationsCard01.vue'
-import ApplicationsCard02 from '~/partials/applications/ApplicationsCard02.vue'
-import ApplicationsCard03 from '~/partials/applications/ApplicationsCard03.vue'
-
-import Image01 from '~/images/applications-image-01.jpg'
-import Image02 from '~/images/applications-image-02.jpg'
-import Image03 from '~/images/applications-image-03.jpg'
-import Image04 from '~/images/applications-image-04.jpg'
-import Image05 from '~/images/applications-image-05.jpg'
-import Image06 from '~/images/applications-image-06.jpg'
-import Image07 from '~/images/applications-image-07.jpg'
-import Image08 from '~/images/applications-image-08.jpg'
-
 export default {
   name: 'Applications',
-  components: {
-    ApplicationsCard01,
-    ApplicationsCard02,
-    ApplicationsCard03,
-  },
   setup() {
     const sidebarOpen = ref(false)
 
     const items01 = ref([
       {
         id: 0,
-        image: Image01,
         title: 'Form Builder CP',
         link: '#0',
         content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
@@ -38,7 +19,6 @@ export default {
       },
       {
         id: 1,
-        image: Image02,
         title: 'Form Builder CP',
         link: '#0',
         content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
@@ -50,7 +30,6 @@ export default {
       },
       {
         id: 2,
-        image: Image03,
         title: 'Form Builder CP',
         link: '#0',
         content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
@@ -62,7 +41,6 @@ export default {
       },
       {
         id: 3,
-        image: Image04,
         title: 'Form Builder CP',
         link: '#0',
         content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
@@ -71,114 +49,33 @@ export default {
         feat02: '37 articles',
         feat03: 'Access on mobile and TV',
         feat04: '8K+ active installations',
-      },      
-    ])
-
-    const items02 = ref([
-      {
-        id: 0,
-        image: Image05,
-        title: 'Form Builder CP',
-        link: '#0',
-        content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
-        price: '$89.00',
-        deal: '$199.00'
       },
-      {
-        id: 1,
-        image: Image06,
-        title: 'Form Builder CP',
-        link: '#0',
-        content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
-        price: '$89.00',
-        deal: '$199.00'
-      },
-      {
-        id: 2,
-        image: Image07,
-        title: 'Form Builder CP',
-        link: '#0',
-        content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
-        price: '$89.00',
-        deal: '$199.00'
-      },
-      {
-        id: 3,
-        image: Image08,
-        title: 'Form Builder CP',
-        link: '#0',
-        content: 'Master Digital Marketing Strategy, Social Media Marketing, Analytics & More!',
-        price: '$89.00',
-        deal: '$199.00'
-      },      
-    ])
-
-    const items03 = ref([
-      {
-        id: 0,
-        title: 'Form Builder CP',
-        link: '#0',
-      },
-      {
-        id: 1,
-        title: 'Form Builder CP',
-        link: '#0',
-      },
-      {
-        id: 2,
-        title: 'Form Builder CP',
-        link: '#0',
-      },
-      {
-        id: 3,
-        title: 'Form Builder CP',
-        link: '#0',
-      },      
     ])
 
     return {
       sidebarOpen,
       items01,
-      items02,
-      items03,
-    }  
-  }
+    }
+  },
 }
 </script>
 <template>
   <!-- Page header -->
-  <div class="mb-5">
+  <div class="mb-5 flex items-center justify-between">
     <!-- Title -->
-    <h1 class="text-2xl md:text-3xl text-gray-800 font-bold">Find the app that’s right for you ✨</h1>
-  </div>
+    <h1 class="text-2xl md:text-3xl text-gray-800 font-bold">监控设备管理</h1>
 
-  <!-- Search form -->
-  <div class="max-w-xl mb-5">
-    <form class="relative">
-      <label for="app-search" class="sr-only">Search</label>
-      <input
-        id="app-search"
-        class="form-input w-full pl-9 py-3 focus:border-gray-300"
-        type="search"
-        placeholder="Search…"
-      />
-      <button class="absolute inset-0 right-auto group" type="submit" aria-label="Search">
-        <svg
-          class="w-4 h-4 flex-shrink-0 fill-current text-gray-400 group-hover:text-gray-500 ml-3 mr-2"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+    <router-link to="/video/detail/0">
+      <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white">
+        <svg class="w-4 h-4 fill-current opacity-50 flex-shrink-0" viewBox="0 0 16 16">
           <path
-            d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"
-          />
-          <path
-            d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"
+            d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"
           />
         </svg>
+        <span class="hidden xs:block ml-2">Add Order</span>
       </button>
-    </form>
+    </router-link>
   </div>
-
   <!-- Filters -->
   <div class="mb-4 border-b border-gray-200">
     <ul
@@ -187,27 +84,16 @@ export default {
       <li
         class="pb-3 mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8"
       >
-        <router-link class="text-indigo-500 whitespace-nowrap" to="#0">View All</router-link>
+        <router-link class="text-indigo-500 whitespace-nowrap" to="#0">1号料场</router-link>
       </li>
       <li
+        v-for="item in 5"
+        :key="item"
         class="pb-3 mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8"
       >
-        <router-link class="text-gray-500 hover:text-gray-600 whitespace-nowrap" to="#0">Web Sprint</router-link>
-      </li>
-      <li
-        class="pb-3 mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8"
-      >
-        <router-link class="text-gray-500 hover:text-gray-600 whitespace-nowrap" to="#0">Marketing</router-link>
-      </li>
-      <li
-        class="pb-3 mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8"
-      >
-        <router-link class="text-gray-500 hover:text-gray-600 whitespace-nowrap" to="#0">Development</router-link>
-      </li>
-      <li
-        class="pb-3 mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8"
-      >
-        <router-link class="text-gray-500 hover:text-gray-600 whitespace-nowrap" to="#0">Design</router-link>
+        <router-link class="text-gray-500 hover:text-gray-600 whitespace-nowrap" to="#0">
+          {{ item + 1 }}号料场
+        </router-link>
       </li>
     </ul>
   </div>
@@ -216,25 +102,50 @@ export default {
   <div>
     <!-- Cards 1 (Trending apps) -->
     <div class="mt-8">
-      <h2 class="text-xl text-gray-800 font-bold mb-5">Trending apps</h2>
       <div class="grid grid-cols-12 gap-6">
-        <ApplicationsCard01 v-for="item in items01" :key="item.id" :item="item" />
-      </div>
-    </div>
-
-    <!-- Cards 2 (Premium but worth it) -->
-    <div class="mt-8">
-      <h2 class="text-xl text-gray-800 font-bold mb-5">Premium but worth it</h2>
-      <div class="grid grid-cols-12 gap-6">
-        <ApplicationsCard02 v-for="item in items02" :key="item.id" :item="item" />
-      </div>
-    </div>
-
-    <!-- Cards 3 (Popular categories) -->
-    <div class="mt-8">
-      <h2 class="text-xl text-gray-800 font-bold mb-5">Popular categories</h2>
-      <div class="grid grid-cols-12 gap-6">
-        <ApplicationsCard03 v-for="item in items03" :key="item.id" :item="item" />
+        <router-link
+          v-for="(item, i) in items01"
+          :key="i"
+          :to="`/video/video/${i}`"
+          class="col-span-full sm:col-span-6 xl:col-span-3 bg-white shadow-lg rounded-sm border border-gray-200 overflow-hidden"
+        >
+          <div class="flex flex-col h-full">
+            <!-- Image -->
+            <img class="w-full" src="/camera.jpeg" width="286" height="160" :alt="item.title" />
+            <!-- Card Content -->
+            <div class="flex-grow flex flex-col p-5">
+              <!-- Card body -->
+              <div class="flex-grow">
+                <!-- Header -->
+                <header class="mb-2 flex justify-between items-center">
+                  <h3 class="text-lg text-gray-800 font-semibold mb-1">前门西</h3>
+                  <router-link class="ml-2 text-sm text-gray-300 hover:text-indigo-700 cursor-pointer" :to="`/video/detail/${i}`">
+                    <cil-pencil />
+                  </router-link>
+                </header>
+                <!-- Features list -->
+                <ul class="text-sm space-y-2 mb-5">
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 fill-current text-gray-400 flex-shrink-0 mr-3" viewBox="0 0 16 16">
+                      <path d="M15.686 5.695L10.291.3c-.4-.4-.999-.4-1.399 0s-.4.999 0 1.399l.6.599-6.794 3.697-1-1c-.4-.399-.999-.399-1.398 0-.4.4-.4 1 0 1.4l1.498 1.498 2.398 2.398L.6 13.988 2 15.387l3.696-3.697 3.997 3.996c.5.5 1.199.2 1.398 0 .4-.4.4-.999 0-1.398l-.999-1 3.697-6.694.6.6c.599.6 1.199.2 1.398 0 .3-.4.3-1.1-.1-1.499zM8.493 11.79L4.196 7.494l6.695-3.697 1.298 1.299-3.696 6.694z" />
+                    </svg>
+                    <div>192.168.0.12</div>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 fill-current text-gray-400 flex-shrink-0 mr-3" viewBox="0 0 16 16">
+                      <path d="M15.686 5.695L10.291.3c-.4-.4-.999-.4-1.399 0s-.4.999 0 1.399l.6.599-6.794 3.697-1-1c-.4-.399-.999-.399-1.398 0-.4.4-.4 1 0 1.4l1.498 1.498 2.398 2.398L.6 13.988 2 15.387l3.696-3.697 3.997 3.996c.5.5 1.199.2 1.398 0 .4-.4.4-.999 0-1.398l-.999-1 3.697-6.694.6.6c.599.6 1.199.2 1.398 0 .3-.4.3-1.1-.1-1.499zM8.493 11.79L4.196 7.494l6.695-3.697 1.298 1.299-3.696 6.694z" />
+                    </svg>
+                    <div>大华热成像PH2981.12</div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Card footer -->
+              <!-- <div>
+                <router-link class="btn-sm w-full bg-indigo-500 hover:bg-indigo-600 text-white" :to="item.link">Install</router-link>
+              </div> -->
+            </div>
+          </div>
+        </router-link>
       </div>
     </div>
   </div>

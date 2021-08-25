@@ -24,8 +24,8 @@ export const base = new Asker({
   catcher: (e) => {
     if (e.status === HttpStatus.unauthorized) {
       localStorage.setItem(STORAGE_SIGN, '{}')
-      const { protocol, host } = window.location
-      window.location.href = `${protocol}//${host}/access/signin`
+      const { protocol, host } = globalThis.location
+      globalThis.location.href = `${protocol}//${host}/access/signin`
     }
   },
 })

@@ -13,7 +13,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('webapp/dist/index.html')
+  mainWindow.loadFile('webapp/dist/index.html/signin')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

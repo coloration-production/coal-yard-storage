@@ -101,13 +101,13 @@ export default {
     }
 
     onMounted(() => {
-      document.addEventListener('click', clickHandler)
-      document.addEventListener('keydown', keyHandler)
+      globalThis.document.addEventListener('click', clickHandler)
+      globalThis.document.addEventListener('keydown', keyHandler)
     })
 
     onUnmounted(() => {
-      document.removeEventListener('click', clickHandler)
-      document.removeEventListener('keydown', keyHandler)
+      globalThis.document.removeEventListener('click', clickHandler)
+      globalThis.document.removeEventListener('keydown', keyHandler)
     })
 
     return {

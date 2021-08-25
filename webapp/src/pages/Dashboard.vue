@@ -1,43 +1,22 @@
 <template>
-  <!-- Welcome banner -->
-  <WelcomeBanner />
-
-  <!-- Dashboard actions -->
-  <div class="sm:flex sm:justify-between sm:items-center mb-8">
-    <!-- Left: Avatars -->
-    <DashboardAvatars />
-
-    <!-- Right: Actions -->
-    <div class="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-      <!-- Filter button -->
-      <FilterButton />
-      <!-- Datepicker built with flatpickr -->
-      <Datepicker />
-      <!-- Add view button -->
-      <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white">
-        <svg class="w-4 h-4 fill-current opacity-50 flex-shrink-0" viewBox="0 0 16 16">
-          <path
-            d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"
-          />
-        </svg>
-        <span class="hidden xs:block ml-2">Add view</span>
-      </button>
-    </div>
-  </div>
-
   <!-- Cards -->
   <div class="grid grid-cols-12 gap-6">
-    <DashboardCard01 />
-    <DashboardCard02 />
-    <DashboardCard03 />
-    <DashboardCard04 />
-    <DashboardCard05 />
+    <DashboardCard01 title="粉尘" />
+    <div class="flex flex-col col-span-full xl:col-span-4 bg-white shadow-lg rounded-sm border border-gray-200">
+      <header class="px-5 py-4 border-b border-gray-100">
+        <h2 class="font-semibold text-gray-800">信号异常状态</h2>
+      </header>
+      <div class="flex justify-between px-5 py-6 items-center">
+        <h2 class="font-semibold text-xl text-gray-800">粉尘</h2>
+        <span class="text-xl  bg-green-500 text-white px-4 py-2 rounded-full">48/48</span>
+      </div>
+      <div class="flex justify-between px-5 py-6 items-center">
+        <h2 class="font-semibold text-xl text-gray-800">温度</h2>
+        <span class="text-xl  bg-red-500 text-white px-4 py-2 rounded-full">43/48</span>
+      </div>
+    </div>
+    <DashboardCard01 title="温度" />
     <DashboardCard06 />
-    <DashboardCard07 />
-    <DashboardCard08 />
-    <DashboardCard09 />
-    <DashboardCard10 />
-    <DashboardCard11 />
   </div>
 </template>
 
@@ -62,10 +41,6 @@ import DashboardCard11 from '../partials/dashboard/DashboardCard11.vue'
 export default {
   name: 'Dashboard',
   components: {
-    WelcomeBanner,
-    DashboardAvatars,
-    FilterButton,
-    Datepicker,
     DashboardCard01,
     DashboardCard02,
     DashboardCard03,

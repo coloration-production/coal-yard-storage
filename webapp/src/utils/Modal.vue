@@ -66,12 +66,12 @@ export default {
     }    
   },  
   mounted() {
-    document.addEventListener('click', this.clickOutside)    
-    document.addEventListener('keydown', this.keyPress)
+    globalThis.document.addEventListener('click', this.clickOutside)    
+    globalThis.document.addEventListener('keydown', this.keyPress)
   },
   beforeDestroy() {
-    document.removeEventListener('click', this.clickOutside)
-    document.removeEventListener('keydown', this.keyPress)
+    globalThis.document.removeEventListener('click', this.clickOutside)
+    globalThis.document.removeEventListener('keydown', this.keyPress)
   }  
 }
 </script>

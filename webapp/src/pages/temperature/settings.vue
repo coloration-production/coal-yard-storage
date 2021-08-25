@@ -75,7 +75,7 @@ export default {
   <div class="sm:flex sm:justify-between sm:items-center mb-8">
     <!-- Left: Title -->
     <div class="mb-4 sm:mb-0">
-      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold">{{ t('menus.dust_settings') }}</h1>
+      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold">{{ t('menus.temperature') }}</h1>
     </div>
 
     <!-- Right: Actions  -->

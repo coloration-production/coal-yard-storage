@@ -16,7 +16,7 @@ declare module 'vue' {
     README: typeof import('./src/components/README.md')['default']
     Sidebar: typeof import('./src/components/Sidebar.vue')['default']
     Table: typeof import('./src/components/Table.vue')['default']
-    TableItem: typeof import('./src/components/TableItem.vue')['default']
+    TableRowExpand: typeof import('./src/components/TableRowExpand.vue')['default']
     Help: typeof import('./src/components/header/Help.vue')['default']
     Languages: typeof import('./src/components/header/Languages.vue')['default']
     Notifications: typeof import('./src/components/header/Notifications.vue')['default']
