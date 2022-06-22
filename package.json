@@ -34,7 +34,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^13.2.1",
-    "electron-builder": "^22.11.7"
+    "electron-builder": "^23.1.0"
   },
   "dependencies": {
     "vue": "^2.6.14"
